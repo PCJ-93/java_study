@@ -29,6 +29,12 @@ public class Variable04 {
 		String s4 = String.valueOf(true);
 		String s5 = String.valueOf(123);
 		String s6 = String.valueOf(88.9901);
+		System.out.println(s6);
+		
+		String s7 = 123456 + "";    // 문자열 결합 연산
+		System.out.println(s7);
+		
+		
 		
 		
 		

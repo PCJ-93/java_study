@@ -11,6 +11,13 @@ public class Hello {
 		 		 ctrl + sgift + c
 		 */
 		
+		System.out.print("안녕");
+		
+		System.out.print("안녕");
+		
+		System.out.println("Hello, Java");
+		
+		System.out.print("안녕");
 	}
 
 }
