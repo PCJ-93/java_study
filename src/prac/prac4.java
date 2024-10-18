@@ -42,14 +42,14 @@ public class prac4 {
 //		8000원 초과 ~ 12000원 -> "눈물"
 //		12000원 초과 -> "물로배채우기"
 		
-		int menuPrice = 50001; //점심 식사 메뉴 가격 (임의로 변경해가면서 테스트)
-		String result = (menuPrice > 50000 ) ? "파산" : (menuPrice > 12000) ? "물로배채우기" : (menuPrice > 8000? "눈물" : (menuPrice > 6000 ? "선방" : "훌륭"));
+		int menuPrice = 15000; //점심 식사 메뉴 가격 (임의로 변경해가면서 테스트)
+//		String result = (menuPrice > 50000 ) ? "파산" : (menuPrice > 12000) ? "물로배채우기" : (menuPrice > 8000? "눈물" : (menuPrice > 6000 ? "선방" : "훌륭"));
 		//왼쪽에서 부터 오른쪽으로 작성 
 //		String result = (menuPrice > 20000) ? "파산" : (menuPrice > 12000) ? "물로배채우기" : (menuPrice > 8000) ? "눈물" : (menuPrice > 6000) ? "선방" :(menuPrice > 0 ? "훌륭" : "공짜");
 		// 오른쪽에서 부터 왼쪽 방향으로 거꾸로 작성한 방법
+		String result = (menuPrice <= 0) ? "굶음" : (menuPrice < 6000) ? "훌륭" : (menuPrice < 8000) ? "선방" : (menuPrice < 12000) ? "눈물" : (menuPrice < 20000) ? "물로배채우기" : "파산";
+		// 작은 수  부터 시작한 방법
 		System.out.println(result);
-		
-		
 		
 		
 		
