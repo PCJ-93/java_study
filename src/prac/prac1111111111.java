@@ -70,47 +70,47 @@ public class prac1111111111 {
 //		System.out.println(sum);
 //		System.out.println(avg);
 		
-		Scanner scanner = new Scanner(System.in);
-		boolean run = true;
-		int studentNum = 0;
-		int[] scoreArr = null;
-		double avg = 0;
-		int sum = 0;
-		int max = 0;
-		
-		while (run) {
-			System.out.println("-------------------------------------------");
-			System.out.println("1.학생수 | 2.점수입력 | 3.점수리스트 | 4.분석 5. 종료");
-			System.out.println("-------------------------------------------");
-			System.out.print("선택 > ");
-			int selectNum = scanner.nextInt();
-			if(selectNum==1) {
-				System.out.println("학생 수를 입력하세요 : ");
-				studentNum = scanner.nextInt();
-				scoreArr = new int[studentNum];
-			}else if(selectNum==2) {
-				for(int i=0; i<scoreArr.length; i++) {
-					System.out.print((i+1)+"번째 점수를 입력하세요 : ");
-					scoreArr[i]=scanner.nextInt();
-				}
-			}else if(selectNum==3) {
-				for(int i=0; i<scoreArr.length; i++) {
-					System.out.println((i+1)+"번째 점수 : "+scoreArr[i]);
-				}
-			}else if(selectNum==4) {
-				for(int i=0; i<scoreArr.length; i++) {
-						max = max<scoreArr[i]?scoreArr[i]:max;
-						sum += scoreArr[i];
-						avg = (double)sum/scoreArr.length;
-					}
-					System.out.println("총점수 : "+sum);
-					System.out.println("최고점수 : "+max);
-					System.out.printf("평균점수 :%.3f \n",avg);
-				} else if(selectNum==5) {
-				run=false;
-			}
-		} 
-		System.out.println("종료되었습니다.");
+//		Scanner scanner = new Scanner(System.in);
+//		boolean run = true;
+//		int studentNum = 0;
+//		int[] scoreArr = null;
+//		double avg = 0;
+//		int sum = 0;
+//		int max = 0;
+//		
+//		while (run) {
+//			System.out.println("-------------------------------------------");
+//			System.out.println("1.학생수 | 2.점수입력 | 3.점수리스트 | 4.분석 5. 종료");
+//			System.out.println("-------------------------------------------");
+//			System.out.print("선택 > ");
+//			int selectNum = scanner.nextInt();
+//			if(selectNum==1) {
+//				System.out.println("학생 수를 입력하세요 : ");
+//				studentNum = scanner.nextInt();
+//				scoreArr = new int[studentNum];
+//			}else if(selectNum==2) {
+//				for(int i=0; i<scoreArr.length; i++) {
+//					System.out.print((i+1)+"번째 점수를 입력하세요 : ");
+//					scoreArr[i]=scanner.nextInt();
+//				}
+//			}else if(selectNum==3) {
+//				for(int i=0; i<scoreArr.length; i++) {
+//					System.out.println((i+1)+"번째 점수 : "+scoreArr[i]);
+//				}
+//			}else if(selectNum==4) {
+//				for(int i=0; i<scoreArr.length; i++) {
+//						max = max<scoreArr[i]?scoreArr[i]:max;
+//						sum += scoreArr[i];
+//						avg = (double)sum/scoreArr.length;
+//					}
+//					System.out.println("총점수 : "+sum);
+//					System.out.println("최고점수 : "+max);
+//					System.out.printf("평균점수 :%.3f \n",avg);
+//				} else if(selectNum==5) {
+//				run=false;
+//			}
+//		} 
+//		System.out.println("종료되었습니다.");
 		
 		
 		

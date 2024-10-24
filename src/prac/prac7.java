@@ -30,14 +30,16 @@ public class prac7 {
 			System.out.println("평균 : "+(double)total/3);
 			System.out.println("축하합니다. 합격입니다!");
 		}
-		
-			
-		
-		
-		
-		
-		
 
+		
+		
+		
+		
+		
+		
+		
+		
 	}
-
 }
+
+
