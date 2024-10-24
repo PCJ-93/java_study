@@ -112,11 +112,23 @@ public class prac1111111111 {
 //		} 
 //		System.out.println("종료되었습니다.");
 		
+
+		
+		int price = 12001;
+		
+		
+		
+		String result =(price>12000)?"물로배채우기":(price>8000)?"눈물":(price>6000)?"선방":"훌륭";
+		System.out.println(result);
 		
 		
 		
 		
 		
+		
+		
+		
+		//////////
 	}
 
 }
