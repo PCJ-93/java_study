@@ -112,14 +112,91 @@ public class prac1111111111 {
 //		} 
 //		System.out.println("종료되었습니다.");
 		
+		
+//		int[][] numArr = new int[5][5];
+//		
+//		for (int i=0; i<numArr.length; i++) {
+//			for(int j=0; j<numArr.length; j++) {
+//				if(i==j) {
+//					numArr[i][j] = 1;
+//					}
+//				else if(i<j) {
+//					numArr[i][j] = 2;
+//				}
+//				else {
+//					numArr[i][j] = 3;
+//				}
+//System.out.print(numArr[i][j]+" ");
+//			}
+//			System.out.println();
+//		}
+		
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		boolean run = true;
+		int menuNum;
+		int count;
+		String select;
+		int ame = 3500;
+		int caff = 4100;
+		int ban = 4300;
+		int menu = 0;
+		int menu1 = 0;
+		int menu2 = 0;
+		
+		
+		while(run) {
 
+			System.out.println("======== 메뉴 ========");
+			System.out.println("1. 아메리카노      3500원");
+			System.out.println("2. 카페라떼       4100원");
+			System.out.println("3. 바닐라라떼      4300원");
+			System.out.println("=====================");
+			System.out.print("메뉴선택 : ");
+			menuNum = scanner.nextInt();
+			System.out.print("수량선택 : ");
+			count = scanner.nextInt();
+			System.out.print("추가 주문 하시겠습니까?(y/n) : ");
+			select = scanner.next();
+			
+			if (select.equals("y")) {
+				
+				run = true;
+			} else {
+				
+				if(menuNum==1) {
+					menu = ame*count;
+				}
+				if (menuNum==2) {
+					menu1 = caff*count;
+				}
+				if (menuNum==3) {
+					menu2 = ban*count;
+				}
+				
+				System.out.println("=====================");
+				
+				if( menu != 0) {
+					System.out.println("아메리카노 " + count + "잔 :" + ame*count);
+				}
+				if( menu1 != 0) {
+					System.out.println("카페라떼 " + count + "잔 :" + caff*count);
+				}
+				if( menu2 != 0) {
+					System.out.println("바닐라라떼 " + count + "잔 :" + ban*count);
+				}
+				System.out.println("=====================");
+				System.out.println("총액 : " + (menu+menu1+menu2));
+			
+				run = false;
+			}
+
+		}
 		
-		int price = 12001;
 		
 		
 		
-		String result =(price>12000)?"물로배채우기":(price>8000)?"눈물":(price>6000)?"선방":"훌륭";
-		System.out.println(result);
 		
 		
 		
