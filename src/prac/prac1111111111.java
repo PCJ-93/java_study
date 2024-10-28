@@ -132,75 +132,270 @@ public class prac1111111111 {
 //		}
 		
 		
+//		Scanner scanner = new Scanner(System.in);
+//		
+//		boolean run = true;
+//		int menuNum;
+//		int count;
+//		String select;
+//		int ame = 3500;
+//		int caff = 4100;
+//		int ban = 4300;
+//		int menu = 0;
+//		int menu1 = 0;
+//		int menu2 = 0;
+//		
+//		
+//		while(run) {
+//
+//			System.out.println("======== 메뉴 ========");
+//			System.out.println("1. 아메리카노      3500원");
+//			System.out.println("2. 카페라떼       4100원");
+//			System.out.println("3. 바닐라라떼      4300원");
+//			System.out.println("=====================");
+//			System.out.print("메뉴선택 : ");
+//			menuNum = scanner.nextInt();
+//			System.out.print("수량선택 : ");
+//			count = scanner.nextInt();
+//			System.out.print("추가 주문 하시겠습니까?(y/n) : ");
+//			select = scanner.next();
+//			
+//			if (select.equals("y")) {
+//				
+//				run = true;
+//			} else {
+//				
+//				if(menuNum==1) {
+//					menu = ame*count;
+//				}
+//				if (menuNum==2) {
+//					menu1 = caff*count;
+//				}
+//				if (menuNum==3) {
+//					menu2 = ban*count;
+//				}
+//				
+//				System.out.println("=====================");
+//				
+//				if( menu != 0) {
+//					System.out.println("아메리카노 " + count + "잔 :" + ame*count);
+//				}
+//				if( menu1 != 0) {
+//					System.out.println("카페라떼 " + count + "잔 :" + caff*count);
+//				}
+//				if( menu2 != 0) {
+//					System.out.println("바닐라라떼 " + count + "잔 :" + ban*count);
+//				}
+//				System.out.println("=====================");
+//				System.out.println("총액 : " + (menu+menu1+menu2));
+//			
+//				run = false;
+//			}
+//
+//		}
+		
+		
+//		int[][] numArr = new int[5][5];
+//		
+//		for (int i=0; i<numArr.length; i++) {
+//			for(int j=0; j<numArr.length; j++) {
+//				if(i==j)
+//				numArr[i][j] = 1;
+//				if(i<j)
+//					numArr[i][j] = 2;
+//				if(i>j)
+//					numArr[i][j] = 3;
+//				System.out.print(numArr[i][j]);
+//				
+//			}
+//			System.out.println();
+//		}
+		
+//		Scanner scanner = new Scanner(System.in);
+//		
+//		String[] menuArr = { "아메리카노", "카페라떼", "바닐라라떼" };
+//		int[] priceArr = { 3500, 4100, 4300 };
+//		int count;
+//		int total = 0;
+//		int[] countArr = new int[menuArr.length];
+//		int menuNum;
+//		String yesNo;
+//		
+//		while(true) {
+//		
+//		while (true) {
+//		
+//			System.out.println("======== 메뉴 ========");
+//			System.out.println("1.아메리카노       3500원");
+//			System.out.println("2.카페라떼        4100원");
+//			System.out.println("3.바닐라라떼       4300원");
+//			System.out.println("=====================");
+//			System.out.print("메뉴 선택 : ");
+//			menuNum = scanner.nextInt();
+//			if (menuNum>=1 && menuNum<=menuArr.length) {
+//				break;
+//			} else {
+//				System.out.println("잘못 선택하셨습니다. 다시 선택해주세요.");
+//			}
+//		}
+//		
+//		System.out.print("수량 선택 : ");
+//		count = scanner.nextInt();
+//		
+//		countArr[menuNum-1] += count;
+//		
+//		scanner.nextLine();
+//		
+//		while(true) {
+//			System.out.print("추가 주문하시겠습니까?(y/n) : ");
+//			yesNo = scanner.nextLine();
+//			if(yesNo.equals("y") || yesNo.equals("n")) {
+//				break;
+//			} else {
+//				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
+//			}
+//		}
+//		
+//		if(yesNo.equals("n")) {
+//			
+//			System.out.println("=====================");
+//			for(int i=0; i<menuArr.length; i++) {
+//				
+//				if(countArr[i]>0) {
+//					System.out.printf("%s %d잔 : %d원\n",menuArr[i], countArr[i], priceArr[i]);
+//					total = total + (countArr[i]*priceArr[i]);
+//					}
+//				}
+//					
+//					System.out.println("=====================");
+//					System.out.println("총액  : " + total + "원");
+//					break;
+//			}
+//		}
+		
+		
+//		Scanner scanner = new Scanner(System.in);
+//		String[] menuArr = {"아메리카노", "카페라떼", "바닐라라떼"};
+//		int[] priceArr = {3500, 4100, 4300};
+//		int menu;
+//		int count;
+//		int[] countArr = new int[menuArr.length];
+//		String yesNo;
+//		int total = 0;
+//		
+//		while(true) {
+//		
+//		while(true) {
+//			System.out.println("======== 메뉴 ========");
+//			for(int i=0; i<menuArr.length; i++) {
+//				System.out.printf("%d.%-8s%7d원\n",i+1, menuArr[i], priceArr[i]);
+//			}
+//			System.out.println("=====================");
+//			System.out.print("메뉴 선택 : ");
+//			menu = scanner.nextInt();
+//			
+//			if(menu>=1 && menu<=menuArr.length) {
+//				break;
+//			} else {
+//				System.out.println("잘못 선택하셨습니다. 다시 선택해주세요.");
+//			}
+//		}
+//		
+//		System.out.print("수량 선택 : ");
+//		count = scanner.nextInt();
+//		
+//		countArr[menu-1] += count;
+//		
+//		scanner.nextLine();
+//
+//		while(true) {
+//			System.out.print("추가 주문하시겠습니까?(y/n) : ");
+//			yesNo = scanner.nextLine();
+//			
+//			if(yesNo.equals("y") || yesNo.equals("n")){
+//				break;
+//			}else {
+//				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
+//			}
+//		}
+//		
+//		if(yesNo.equals("n")) {
+//			System.out.println("====================");
+//			for(int i=0; i<menuArr.length; i++) {
+//				if(countArr[i]>0) {
+//				System.out.printf("%s %2d잔 : %3d원\n",menuArr[i],countArr[i],countArr[i]*priceArr[i]);
+//				
+//				total = total + (countArr[i]*priceArr[i]);
+//				}
+//			}
+//			System.out.println("====================");
+//			System.out.println("총액 : " + total + "원");
+//			break;
+//		}
+//		
+//		
+//		}
+		
 		Scanner scanner = new Scanner(System.in);
 		
-		boolean run = true;
+		String[] menuArr = {"아메리카노", "카페라떼", "바닐라라떼"};
+		int[] priceArr = {3500, 4100, 4300};
 		int menuNum;
 		int count;
-		String select;
-		int ame = 3500;
-		int caff = 4100;
-		int ban = 4300;
-		int menu = 0;
-		int menu1 = 0;
-		int menu2 = 0;
+		int[] countArr = new int[menuArr.length];
+		String yesNo;
+		int total = 0;
 		
 		
-		while(run) {
-
+		while(true) {
+		
+		while(true) {
 			System.out.println("======== 메뉴 ========");
-			System.out.println("1. 아메리카노      3500원");
-			System.out.println("2. 카페라떼       4100원");
-			System.out.println("3. 바닐라라떼      4300원");
-			System.out.println("=====================");
-			System.out.print("메뉴선택 : ");
-			menuNum = scanner.nextInt();
-			System.out.print("수량선택 : ");
-			count = scanner.nextInt();
-			System.out.print("추가 주문 하시겠습니까?(y/n) : ");
-			select = scanner.next();
-			
-			if (select.equals("y")) {
-				
-				run = true;
-			} else {
-				
-				if(menuNum==1) {
-					menu = ame*count;
-				}
-				if (menuNum==2) {
-					menu1 = caff*count;
-				}
-				if (menuNum==3) {
-					menu2 = ban*count;
-				}
-				
-				System.out.println("=====================");
-				
-				if( menu != 0) {
-					System.out.println("아메리카노 " + count + "잔 :" + ame*count);
-				}
-				if( menu1 != 0) {
-					System.out.println("카페라떼 " + count + "잔 :" + caff*count);
-				}
-				if( menu2 != 0) {
-					System.out.println("바닐라라떼 " + count + "잔 :" + ban*count);
-				}
-				System.out.println("=====================");
-				System.out.println("총액 : " + (menu+menu1+menu2));
-			
-				run = false;
+			for(int i=0; i<menuArr.length; i++) {
+				System.out.printf("%d.%-8s %6d원\n",i+1, menuArr[i], priceArr[i]);
 			}
-
+			System.out.println("======== 메뉴 ========");
+			System.out.print("메뉴 선택 : ");
+			menuNum = scanner.nextInt();
+			if(menuNum>=1 && menuNum<=3) {
+				break;
+			} else {
+				System.out.println("잘못 선택하셨습니다. 다시 선택해주세요.");
+			}
 		}
 		
+		System.out.print("수량 선택 : ");
+		count = scanner.nextInt();
+		countArr[menuNum-1] += count;
 		
+		scanner.nextLine(); //엔터 제거
 		
+		while(true) {
+			System.out.print("추가 주문하시겠습니까?(y/n) : ");
+			yesNo = scanner.nextLine();
+			
+			if(yesNo.equals("y") || yesNo.equals("n")) {
+				break;
+			} else {
+				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
+			}
+		}
 		
+		if (yesNo.equals("n")) {
+			System.out.println("=====================");
+			for(int i=0; i<menuArr.length; i++) {
+				if(countArr[i]>0) {
+					System.out.printf("%5s %d잔 : %4d원\n", menuArr[i], countArr[i], (priceArr[i]*countArr[i]) );
+					total = total + (priceArr[i]*countArr[i]);
+				}
+			}
+			System.out.println("=====================");
+			System.out.println("총액 : " + total + "원");
+			break;
+		}
+		}
 		
-		
-		
-		
+
 		
 		
 		
