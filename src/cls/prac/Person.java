@@ -43,7 +43,7 @@ public class Person {
 	}
 	
 	double PersonInfo(){
-		double num = tall/weight;
+		double num = weight/tall;
 		System.out.printf("이름:%s 성별:%s 나이:%d ...결과:%f\n", name, gender, age, num);
 		return num;
 	}
