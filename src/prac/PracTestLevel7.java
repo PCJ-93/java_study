@@ -19,6 +19,11 @@ public class PracTestLevel7 {
 		int basePoint = 0;  // 베이스 점수
 		int[] ball4Arr = new int[tusuNumArr.length];  // 각선수 볼넷카운트
 		int[] tusuOutCountArr = new int[tusuNumArr.length]; //  각선수 아웃카운트
+		int[] homeRunPersentArr = new int[tusuNumArr.length]; //각선수 홈런확률 (랜덤)
+		for(int i=0; i<tusuNumArr.length; i++) {
+			homeRunPersentArr[i] = (int)(Math.random()*60)+1;  // 위와동일(랜덤)반복돌림
+		}
+		int[] homeRunCountArr = new int[tusuNumArr.length]; // 각선수 홈런카운트
 		
 		
 		for(int i=0; i<tusuNumArr.length; i++) {
@@ -52,10 +57,13 @@ public class PracTestLevel7 {
 				}
 				
 				if( (myRandom==random || myRandom-random<=3 || random-myRandom<=3) && ball==3 && strike<2) {
+					if(ball==3) {
+						ball4Arr[Q] += 1;
+					}
+					
 					System.out.println("안타");
 					antaCountArr[Q] += 1;
 					antaPersentArr[Q] = antaCountArr[Q]/(double)swingCountArr[Q];
-					ball4Arr[Q] += 1;
 					
 					base++;
 	
