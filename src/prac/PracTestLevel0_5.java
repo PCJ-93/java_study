@@ -17,35 +17,69 @@ public class PracTestLevel0_5 {
 		int[] antaCountArr = new int[playerArr.length];
 		int[] swingCountArr = new int[playerArr.length];
 		double[] antaPersentArr = new double[playerArr.length];
+		int ballCount = 0;
+		int strikeCount = 0;
+		int[] ball4CountArr = new int[playerArr.length];
 		
 		
 		
 			while(true) {
-				System.out.println("   " + ggggg + "회차");
-				System.out.println(playerArr[up] + " 타율:"+antaPersentArr[up] + " 타석수:"+swingCountArr[up]);
-				random = ((int)(Math.random()*100)+1);
-				myRandom = ((int)(Math.random()*100)+1);
-				swingCountArr[up] += 1;
-				
-				
-				if(random == myRandom) {
-					System.out.println(" --안타--");
-					antaCountArr[up] += 1;
-					antaPersentArr[up] = antaCountArr[up] / (double)swingCountArr[up];
-				} else {
-					System.out.println(" --아웃--");
-					outCount++;
-				}
-				
-				if(outCount==3) {
-					outCount=0;
-					ggggg++;
-					gameCount++;
-				}
-			
+				while(true) {
+					System.out.println("   " + ggggg + "회차");
+					System.out.println(playerArr[up] + " 타율:"+antaPersentArr[up] + " 타석수:"+swingCountArr[up]);
+					random = ((int)(Math.random()*100)+1);
+					myRandom = ((int)(Math.random()*100)+1);
+					swingCountArr[up] += 1;
+					
+					
+					if( (random>=1&&random<=20)||(random>=50&&random<=60)||(random>=90&&random<=100) ) {
+						
+						if( (random == myRandom)|| ((random-myRandom<=3)&&(myRandom-random<=3)) ) {
+							System.out.println(" --스트라이크지만 안타--");
+							antaCountArr[up] += 1;
+							antaPersentArr[up] = antaCountArr[up] / (double)swingCountArr[up];
+						} else {
+							System.out.println(" --스트라이크--");
+							strikeCount +=1;
+						}
+						
+					} else { //볼
+						
+						if( (random == myRandom)|| ((random-myRandom<=3)&&(myRandom-random<=3)) ) {
+							System.out.println(" --볼이지만 안타--");
+							antaCountArr[up] += 1;
+							antaPersentArr[up] = antaCountArr[up] / (double)swingCountArr[up];
+						} else {
+							System.out.println(" --볼--");
+							ballCount += 1;
+						}
+						
+					}
+					
+					if(ballCount == 4) {
+						ball4CountArr[up] += 1;
+						antaCountArr[up] += 1;
+						ballCount = 0;
+					}
+					
+					if(strikeCount==3) {
+						outCount += 1;
+						
+					}
+					
+					if(outCount == 3) {
+						strikeCount = 0;
+						ballCount=0;
+						outCount = 0;
+						ggggg++;
+						gameCount++;
+						
+						break;
+					}
+			}
 				if(gameCount==3) {
 					break;
-			}
+				}
 				up++;
 				if(up == 9) {
 					up = 0;
