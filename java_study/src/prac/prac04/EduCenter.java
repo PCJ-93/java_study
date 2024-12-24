@@ -61,7 +61,7 @@ public class EduCenter {
 		empList.add(e3);
 		empList.add(e4);
 		for(EmployeeList item : empList) {
-			System.out.println(item.name + item.age);
+			System.out.println(item.name + item.age + item.tel);
 		}
 		
 
