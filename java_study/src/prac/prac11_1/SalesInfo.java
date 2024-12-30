@@ -1,4 +1,4 @@
-package study.practice.practice30;
+package prac.prac11_1;
 
 public class SalesInfo {
 
