@@ -166,7 +166,18 @@ public class FoodTruck extends FoodTruckMain {
 						break;
 					} else {
 						System.out.println("다시입력 : ");
-						selectNum3 = scanner.nextInt();
+
+						menuNum3 = scanner.nextLine();
+						int selectNum4;
+						
+						try {
+							selectNum4 = Integer.parseInt(menuNum3);
+						}catch (Exception e) {
+							System.out.println("첨부터 다시하세요");
+							break;
+						}
+						
+						
 					}
 				}
 
