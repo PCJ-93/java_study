@@ -1,4 +1,4 @@
-package prac.prac11_1;
+package prac.prac11_11;
 
 public class Food {
 	String name;  //이름
