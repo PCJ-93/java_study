@@ -19,24 +19,34 @@ public class ApiExplorer {
 
 	public static void main(String[] args)  {
 
-		List<ArplInfo> arplList;
+		List<ArplInfo> arplList = null;
 		try {
-			arplList = ArplApiService.forecastDustArplInfoList("2024-12-11");
+			arplList = ArplApiService.forecastDustArplInfoList("2024-12-12");
 
 			for(ArplInfo info : arplList) {
 				System.out.println( info.toString() );
 			}
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 		//ArplInfo 객체 -> DB 저장
+		ArplDAO arplDAO = new ArplDAO();
+		int count = 0;
+		for(ArplInfo ai : arplList) {
+			count+=arplDAO.saveArplInfo(ai);
+		}
+		System.out.println(count+"개 저장성공");
+		
+		//api - > 데이터확보 -> 저장
+		//누적해서 데이터를 계속 저장/활용
+		//1) 기존데이터 delete -> 새로 insert
+		//2) MERGE 처리
 		
 		//ArplDAO
-		ArplDAO arplDAO = new ArplDAO();
-		//arplDAO.saveArpl()
+//		arplDAO.saveArplInfo(arplList.get(0));
+		
 	}
 
 }
