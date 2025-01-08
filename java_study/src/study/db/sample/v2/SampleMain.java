@@ -153,7 +153,7 @@ public class SampleMain {
 		conn = DBConnectionManager.connectDB();
 		
 		//쿼리 준비
-		String sqlQuery = "select * from product";
+		String sqlQuery = "select * from student";
 		try {
 			//쿼리 실행 후 데이터 후속 처리
 
