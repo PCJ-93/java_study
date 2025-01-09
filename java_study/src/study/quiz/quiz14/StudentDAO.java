@@ -45,8 +45,6 @@ public class StudentDAO {
 				studentInfo.add(student);
 				
 			}
-			
-			return studentInfo;
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -93,8 +91,6 @@ public class StudentDAO {
 				studentInfo.add(student);
 				
 			}
-			
-			return studentInfo;
 
 		} catch (SQLException e) {
 			e.printStackTrace();
